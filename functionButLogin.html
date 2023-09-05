@@ -1,0 +1,224 @@
+<!-- 系統主頁(登入後) -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b608df6edd.js" crossorigin="anonymous"></script>
+
+    <style>
+        #card {
+            background-color: #D8E5EE;
+            border-radius: 10px;
+        }
+
+        #card_font {
+            color: black;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        #a_border a {
+            text-decoration: none;
+        }
+
+
+
+        #Booking {
+            padding-top: 20px;
+            height: 600px;
+            width: 90%;
+            font-weight: 500;
+            background-color: white;
+            position: fixed;
+            margin: auto;
+            left: 0%;
+            right: 0;
+            top: 0;
+            bottom: 0%;
+            font-size: 20px;
+            display: none;
+        }
+
+        #BookingTitle {
+            margin: auto;
+            width: 80%;
+            border-bottom: 3px solid black;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #imformation {
+            padding-left: 10%;
+        }
+
+        #time p:not(:first-child) {
+            padding-left: 18%;
+        }
+
+        #num p:not(:first-child) {
+            font-size: 30px;
+            font-weight: 700;
+            padding-left: 35%;
+        }
+        #bt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #back {
+            background-color: rgb(139, 139, 224);
+            color: white;
+            width: 80%;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin: 20px;
+        }
+
+        #cancel {
+            background-color: rgb(189, 57, 57);
+            color: white;
+            width: 80%;
+            height: 40px;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+        @media screen and (min-width:768px) {
+            #Booking{
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fuild" id="bg">
+        <nav class="navbar navbar-light bg-light p-0">
+            <div class="container-fluid">
+                <span class="navbar-text d-flex w-100 justify-content-between align-content-center pt-3 pb-3">
+                    <div class="" id="top-left">
+                        系統名稱
+                    </div>
+                    <div class="" id="top-right">
+                        <a href="" class="m-2" id="loginBT">XXX您好</a>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </span>
+            </div>
+        </nav>
+
+
+        <div class="container d-flex" style="margin-top: 100px;">
+            <div class="row m-auto align-content-around">
+                <div class="col-12 col-md-6 p-3" id="a_border">
+                    <a href="">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>預約車位</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 p-3" id="a_border">
+                    <a href="" id="Booking_bt">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>預約資訊</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 p-3" id="a_border">
+                    <a href="">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>尋找愛車</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 p-3" id="a_border">
+                    <a href="">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>費用查詢<br>及繳費</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Booking">
+        <p class="" id="BookingTitle">預約資訊</p>
+        <div class="" id="imformation">
+            <div id="time">
+                <p class="m-0">預約時間</p>
+                <p>2022/01/01 16:32</p>
+            </div>
+            <div id="num">
+                <p>預約代號</p>
+                <p>123</p>
+            </div>
+            <div id="num">
+                <p>預約車格</p>
+                <p>B23</p>
+            </div>
+        </div>
+        <div id="bt">
+            <button type="button" id="back">返回</button>
+            <button type="button" id="cancel">取消預約</button>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload=()=>{
+            document.getElementById("Booking_bt").addEventListener("click",()=>{
+                document.getElementById("Booking").style.display="block";
+                event.preventDefault();
+            })
+            document.getElementById("back").addEventListener("click",()=>{
+                document.getElementById("Booking").style.display="none";
+                event.preventDefault();
+            })
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

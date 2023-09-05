@@ -1,0 +1,13 @@
+#bg {
+    height: 100vh;
+    width: 100%;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(to bottom right, #4a9bf1, white, #4a9bf1); */
+}
+
+#loginBT {
+    text-decoration: none;
+}
