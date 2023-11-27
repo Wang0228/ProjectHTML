@@ -13,10 +13,11 @@
     <script src="https://kit.fontawesome.com/b608df6edd.js" crossorigin="anonymous"></script>
 
     <style>
-        a{
+        a {
             text-decoration: none;
             color: white;
         }
+
         #title {
             font-weight: 700;
             font-size: 40px;
@@ -24,13 +25,15 @@
             padding-left: 4%;
             margin: 0;
         }
-        #bt{
+
+        #bt {
             display: flex;
             flex-direction: column;
-            margin-top: 70%;
+            margin-top: 20%;
             font-size: 22px;
         }
-        #pay{
+
+        #pay {
             background-color: rgb(233, 186, 100);
             width: 80%;
             height: 40px;
@@ -39,21 +42,46 @@
             margin: 20% 20px 20px;
             color: white;
         }
+        #choose-card-main{
+            width: 90%;
+        }
+        #choose-card-main select{
+            height: 30px;
+        }
+        #choose-card-main textarea{
+            height: 30px;
+        }
+        #choose-card {
+            width: 80%;
+        }
+
         @media screen and (min-width:768px) {
-            #title{
+            #title {
                 font-size: 50px;
                 text-align: center;
                 padding-top: 10%;
             }
-            #bt{
+
+            #bt {
                 margin: 0;
                 align-items: center;
                 display: flex;
                 justify-content: center;
+                margin-top: 20%;
             }
-            #pay{
-                width: 20%;
-                margin-top: 10%;
+
+            #pay {
+                width: 40%;
+                
+            }
+            #main{
+                width: 50%;
+            }
+            #choose-card-main{
+                padding-left: 13%;
+            }
+            #choose-card-main textarea{
+            width: 80%;
             }
         }
     </style>
@@ -73,22 +101,25 @@
         </nav>
 
         <div class="container h-80">
-            <div class="row m-auto h-75 align-content-around d-flex flex-column align-items-center">
-                <h1 id="title">繳費</h1>
-                <p>選擇卡片</p>
-                <select name="" id="">
-                    <option value="">VISA</option>
-                </select>
-                s
+            <div class="row m-auto h-75 align-content-around d-flex flex-column align-items-center" id="main">
+                <h1 id="title" class="mb-5">繳費</h1>
+                <div id="choose-card-main">
+                    <p class="m-0 mb-2">選擇卡片</p>
+                    <select name="" id="choose-card" class="mb-3 ms-3">
+                        <option value="">VISA</option>
+                    </select>
+                </div>
                 <hr>
-                <p>卡號</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <p>卡片有效日期</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <p>安全碼</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <div id="bt">
-                    <button type="button" id="pay"><a href="">繳費</a></button>
+                <div id="choose-card-main">
+                    <p class="m-0 mb-2">卡號</p>
+                    <textarea placeholder="0000 0000 0000 0000" class="mb-4 ms-3" name="" id="" cols="30" rows="10"></textarea>
+                    <p class="m-0 mb-2">卡片有效日期</p>
+                    <textarea placeholder="MM/YY" class="mb-4 ms-3" name="" id="" cols="30" rows="10"></textarea>
+                    <p class="m-0 mb-2">安全碼</p>
+                    <textarea placeholder="123" class="ms-3" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div id="bt" class="d-flex align-items-center">
+                    <button type="button" id="pay" class="m-0"><a href="">繳費</a></button>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<!-- 系統主頁(登陸前) -->
+<!-- 系統主頁(登入後) -->
 <!doctype html>
 <html lang="en">
 
@@ -58,28 +58,25 @@
             border-top: 2px solid black;
         }
 
-        #use_teach {
-            width: 80%;
-            height: 650px;
-            border-radius: 20px;
+        #HowToUse {
+            height: 600px;
+            width: 300px;
             background-color: white;
+            text-align: center;
             position: fixed;
-            z-index: 9;
             margin: auto;
-            left: 0;
+            left: 0%;
             right: 0;
             top: 0;
-            bottom: 0;
+            bottom: 0%;
+            font-size: 25px;
             display: none;
+            border-radius: 20px;
         }
 
-
-        #use_teach a {
+        #HowToUse a {
             text-decoration: none;
-            text-align: center;
-            margin-top: 5px;
             color: black;
-            font-size: 25px;
         }
 
         #title {
@@ -98,7 +95,44 @@
         img {
             width: 100%;
         }
+        #HowToUseTitle {
+            width: 100%;
+            border-bottom: 3px solid black;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        [id^="HowToUse_option"]{
+            font-size: 30px;
+        }
+        [id^="option"]{
+            height: 500px;
+            width: 250px;
+            background-color: white;
+            text-align: center;
+            position: fixed;
+            margin: auto;
+            left: 0%;
+            right: 0;
+            top: 0;
+            bottom: 0%;
+            font-size: 25px;
+            display: none;
+        }
 
+        #bk4{
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            margin-left: auto;
+            padding-top: 5px;
+        }
+        [id^="HowToUse_option"] {
+        cursor: pointer;}
+        [id^="option"] {
+            word-wrap: break-word;
+            text-align: left;
+            }
         @media screen and (min-width:768px) {
             #main-text {
                 margin-top: 100px;
@@ -151,65 +185,152 @@
             <div id="rwd-text">
                 <p id="introduce" class="ps-3">介紹標語</p>
                 <a href="" id="teaching" class="ps-3">使用教學</a>
-                <div class="flex-column p-3 align-items-center" id="use_teach">
+                <div class="flex-column p-3 align-items-center" id="HowToUse">
                     <div id="bk">
                         <a href="">
                             <img src="back.png" alt="">
                         </a>
                     </div>
-                    <p class="" id="title">使用說明</p>
-                    <a href="">
-                        <p>如何尋找車位</p>
-                    </a>
-                    <a href="">
-                        <p>如何預約</p>
-                    </a>
-                    <a href="">
-                        <p>如何入場</p>
-                    </a>
-                    <a href="">
-                        <p>如何進行室內導航</p>
-                    </a>
-                    <a href="">
-                        <p>如何控制地鎖</p>
-                    </a>
-                    <a href="">
-                        <p>如何尋找愛車</p>
-                    </a>
-                    <a href="">
-                        <p>如何出場</p>
-                    </a>
-                    <a href="">
-                        <p>如何付款</p>
-                    </a>
+                    <p id="HowToUseTitle">使用說明</p>
+                    <p id="HowToUse_option1">如何尋找車位</p>
+                    <p id="HowToUse_option2">如何預約</p>
+                    <p id="HowToUse_option3">如何入場</p>
+                    <p id="HowToUse_option4">如何進行室內導航</p>
+                    <p id="HowToUse_option5">如何控制地鎖</p>
+                    <p id="HowToUse_option6">如何尋找愛車</p>
+                    <p id="HowToUse_option7">如何出場</p>
+                    <p id="HowToUse_option8">如何付款</p>
+                </div>
+                <div id="option1">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何尋找車位</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option2">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何預約</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option3">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何入場</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option4">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何進行室內導航</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option5">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何控制地鎖</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option6">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何尋找愛車</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option7">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何出場</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
+                </div>
+                <div id="option8">
+                    <div id="bk4">
+                        <a href="#" id="question_bk_button">
+                            <img src="back.png" alt="">
+                        </a>
+                    </div>
+                    <h3>如何付款</h3>
+                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+        
                 </div>
             </div>
         </div>
         <div id="bt">
             <p>下滑使用功能</p>
         </div>
+        
     </div>
 
 
 
 
+
     <script>
-        window.onload=()=>{
-            let teach=document.getElementById("teaching");
-            let div=document.getElementById("use_teach");
-            teach.addEventListener("click",(event)=>{
+        window.onload = () => {
+            let teach = document.getElementById("teaching");
+            let div = document.getElementById("HowToUse");
+            teach.addEventListener("click", (event) => {
                 event.preventDefault();
-                div.style.display="flex";
+                div.style.display = "flex";
             })
 
-            let bk=document.getElementById("bk");
-            bk.addEventListener("click",(event)=>{
+            let bk = document.getElementById("bk");
+            bk.addEventListener("click", (event) => {
                 event.preventDefault();
-                div.style.display="none";
+                div.style.display = "none";
             })
+            document.getElementById("HowToUse").addEventListener("click",function(event){
+                const optionId = event.target.id;
+                console.log(optionId)
+                if (optionId.startsWith("HowToUse_option")) {
+                    const optionNumber = optionId.replace("HowToUse_", "");
+                    console.log(optionNumber)
+                    const windowToShow = document.getElementById(optionNumber);
+                    
+                    if (windowToShow) {
+                        windowToShow.style.display = "block";
+                }
+    }
+            })
+            document.querySelectorAll('[id^="bk4"]').forEach(function(bkButton) {
+            bkButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                var optionElement = bkButton.closest('[id^="option"]');
+                if (optionElement) {
+                optionElement.style.display = 'none';
+                }
+            });
+            });
         }
     </script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
