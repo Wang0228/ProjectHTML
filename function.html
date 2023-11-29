@@ -14,20 +14,106 @@
     <script src="https://kit.fontawesome.com/b608df6edd.js" crossorigin="anonymous"></script>
 
     <style>
-        #card{
+        #card {
             background-color: #D8E5EE;
             border-radius: 10px;
         }
-        #card_font{
+
+        #card_font {
             color: black;
             font-weight: 700;
             font-size: 30px;
             text-align: center;
             padding-top: 10px;
         }
-        #a_border a{
+
+        #a_border a {
             text-decoration: none;
         }
+
+
+
+        #Booking {
+            padding-top: 20px;
+            height: 600px;
+            width: 90%;
+            font-weight: 500;
+            background-color: white;
+            position: fixed;
+            margin: auto;
+            left: 0%;
+            right: 0;
+            top: 0;
+            bottom: 0%;
+            font-size: 20px;
+            display: none;
+        }
+
+        #BookingTitle {
+            margin: auto;
+            width: 80%;
+            border-bottom: 3px solid black;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #imformation {
+            padding-left: 10%;
+        }
+
+        #time p:not(:first-child) {
+            padding-left: 18%;
+        }
+
+        #num p:not(:first-child) {
+            font-size: 30px;
+            font-weight: 700;
+            padding-left: 35%;
+        }
+        #bt{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #back {
+            background-color: rgb(139, 139, 224);
+            color: white;
+            width: 80%;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin: 20px;
+        }
+
+        #cancel {
+            background-color: rgb(189, 57, 57);
+            color: white;
+            width: 80%;
+            height: 40px;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+        #card{
+            width: 334px;
+            height: 111px;
+        }
+        .card-pic img{
+            width: 117px; 
+            height: 111px;
+        }
+        @media screen and (min-width:768px) {
+            #Booking{
+                width: 40%;
+            }
+            #card{
+            width: 616px;
+            height: 205px;
+            }
+            .card-pic img{
+            width: 308px; 
+            height: 205px;
+        }}
     </style>
 </head>
 
@@ -53,50 +139,50 @@
             <div class="row m-auto align-content-around">
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="">
-                            <div class=" d-flex" id="card">
-                                <div class="w-50 card-pic">
-                                    <img src="https://fakeimg.pl/300x200/200" class="w-100">
-                                </div>
-                                <div class="w-50 card-text m-auto" id="card_font">
-                                    <p>預約車位</p>
-                                </div>
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="預約車位.png" class="w-100">
                             </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>預約車位</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 p-3" id="a_border">
+                    <a href="" id="Booking_bt">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="預約資訊.png" class="w-100">
+                            </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>預約資訊</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="">
-                            <div class=" d-flex" id="card">
-                                <div class="w-50 card-pic">
-                                    <img src="https://fakeimg.pl/300x200/200" class="w-100">
-                                </div>
-                                <div class="w-50 card-text m-auto" id="card_font">
-                                    <p>預約資訊</p>
-                                </div>
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="尋找愛車.png" class="w-100">
                             </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>尋找愛車</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-12 col-md-6 p-3" id="a_border">
-                    <a href="">
-                            <div class=" d-flex" id="card">
-                                <div class="w-50 card-pic">
-                                    <img src="https://fakeimg.pl/300x200/200" class="w-100">
-                                </div>
-                                <div class="w-50 card-text m-auto" id="card_font">
-                                    <p>尋找愛車</p>
-                                </div>
+                    <a href="Inquire.html">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="費用查詢及繳費.png" class="w-100">
                             </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 p-3" id="a_border">
-                    <a href="">
-                            <div class=" d-flex" id="card">
-                                <div class="w-50 card-pic">
-                                    <img src="https://fakeimg.pl/300x200/200" class="w-100">
-                                </div>
-                                <div class="w-50 card-text m-auto" id="card_font">
-                                    <p>費用查詢<br>及繳費</p>
-                                </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>費用查詢<br>及繳費</p>
                             </div>
+                        </div>
                     </a>
                 </div>
             </div>

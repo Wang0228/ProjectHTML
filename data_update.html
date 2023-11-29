@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="member-information-management.css">
+    <title>會員資料管理</title>
+    <style>
+        /* 背景色 */
+body {
+    background-image: url("IMG_3089.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0%;
+    margin: 0%;
+}
+
+.header {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* 設定註冊方底框樣式 */
+.container {
+    background-color: white;
+    width: 600px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-name {
+    font-size: 15px;
+    vertical-align: bottom;
+}
+
+/* 標題 */
+.sign-up-title {
+    text-align: center;
+    margin-top: 10px;
+    font-family: Microsoft JhengHei;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img{
+    display:block; 
+    margin:auto;
+}
+
+.status-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .empty {
+    background-color: green;
+  }
+
+  .occupied {
+    background-color: red;
+  }
+
+  .edit-icon {
+    cursor: pointer;
+  }
+
+  /* 模態框 */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 450px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    border-radius: 5%;
+    font-size: 18px;
+
+    position: relative;
+    top: -14%;
+    left: 0%;
+    transform: translate(0%, 0);
+  }
+
+  /* .modal-button {
+    margin-top: 10px;
+  } */
+
+  #editConfirm,#editCancel {
+    background-color: #518ab7;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 20px;
+    cursor: pointer;
+    display: block;
+    width: 35%;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 20px;
+
+    position: relative;
+    top: 50%;
+    left: 15%;
+}
+
+.close {
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.word{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 22px;
+    line-height:35px;
+}
+
+#editForm{
+    text-align: left;
+    padding-left: 15px;
+    font-size: 22px;
+    line-height:40px;
+}
+
+input{
+    height: 20px;
+    font-size: 18px;
+    color: #656565;
+}
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#" class="header">
+            <header>系統名稱</header>
+        </a>
+    </div>
+    <div class="container">
+        <h1 class="sign-up-title">更新資料紀錄</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>時間</th>
+                    <th>帳號</th>
+                    <th>動作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-09-15</td>
+                    <td>A001</td>
+                    <td>Delete account:Jack001</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        // JavaScript代碼
+function openViewModal(userId) {
+    const modal = document.getElementById("viewModal");
+    const user = getUserDataById(userId);
+
+    if (user) {
+        document.getElementById("viewUserId").textContent = user.userId;
+        document.getElementById("viewEmail").textContent = user.email;
+        document.getElementById("viewPassword").textContent = user.password;
+        document.getElementById("viewPhone").textContent = user.phone;
+        document.getElementById("viewCard").textContent = user.card;
+        document.getElementById("viewLicensePlate").textContent = user.licensePlate;
+        modal.style.display = "block";
+    }
+}
+
+function openEditModal(userId) {
+    const modal = document.getElementById("editModal");
+    const user = getUserDataById(userId);
+
+    if (user) {
+        document.getElementById("editUserId").value = user.userId;
+        document.getElementById("editEmail").value = user.email;
+        document.getElementById("editPassword").value = user.password;
+        document.getElementById("editPhone").value = user.phone;
+        document.getElementById("editCard").value = user.card;
+        document.getElementById("editLicensePlate").value = user.licensePlate;
+        modal.style.display = "block";
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+function saveEdit() {
+    // 在這裡處理編輯儲存的邏輯
+    closeModal("editModal");
+}
+
+function cancelEdit() {
+    closeModal("editModal");
+}
+
+// 用來模擬根據會員ID獲取會員數據的函數
+function getUserDataById(userId) {
+    // 在這裡模擬根據會員ID從數據庫或其他地方獲取會員數據
+    // 這裡返回一個模擬的會員對象
+    return {
+        userId: userId,
+        email: "example@example.com",
+        password: "********",
+        phone: "1234567890",
+        card: "1234-5678-9012-3456",
+        licensePlate: "ABC-123"
+    };
+}
+
+// 按鈕滑過變色
+editConfirm.addEventListener('mouseover', function () {
+    editConfirm.style.backgroundColor = '#58B2DC'; // 淺藍色
+});
+editConfirm.addEventListener('mouseout', function () {
+    editConfirm.style.backgroundColor = '#518ab7'; // 原來的藍色
+});
+
+editCancel.addEventListener('mouseover', function () {
+    editCancel.style.backgroundColor = '#58B2DC'; // 淺藍色
+});
+editCancel.addEventListener('mouseout', function () {
+    editCancel.style.backgroundColor = '#518ab7'; // 原來的藍色
+});
+    </script>
+    <script src="member-information-management.js"></script>
+</body>
+
+</html>

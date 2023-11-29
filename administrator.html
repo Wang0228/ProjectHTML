@@ -1,4 +1,3 @@
-<!-- 系統主頁(登入後) -->
 <!doctype html>
 <html lang="en">
 
@@ -83,12 +82,17 @@
             font-size: 20px;
             color: gray;
         }
+        #price_setting input{
+            width: 80%;
+            margin-left: 10%;
+        }
         #setting_title{
             margin: auto;
             width: 80%;
             border-bottom: 3px solid black;
             font-size: 40px;
             text-align: center;
+            margin-top: 30px;
             margin-bottom: 30px;
             color: black;
         }
@@ -105,7 +109,6 @@
             margin-top: 10px;
             display: inline-block;
             font-size: 20px;
-
             position: relative;
             top: 50%;
             left: 50%;
@@ -120,29 +123,25 @@
             #Booking{
                 width: 40%;
             }
-
             #setting_title{
-                margin-left: 0;
                 margin-top: 55px;
                 font-size: 60px;
-
-
+                max-width: 800px;
+                margin-right: 20%;
             }
             #price_text{
+                margin-left: 15%;
                 font-size: 40px;
             }
             #price_setting{
+                width: 70%;
                 padding-left: 200px;
-                width: 60%;
-            }
-            #price_setting textarea{
-                width: 90%;
-                max-width: 800px;
-                display: block; 
-                margin: 0 auto; 
-
                 
             }
+            #price_setting input{
+            width: 40%;
+            margin-left: 20%;
+        }
             .downBtn{
                 margin-left: -100px;
                 
@@ -188,7 +187,7 @@
                 <div id="price_setting">
                     <p id="setting_title">定價設定</p>
                     <p class="ps-4" id="price_text">每小時價錢</p>
-                    <textarea class="ms-4" name="" id="" ></textarea>
+                    <input type="text" id="" placeholder="">
                     <button class="downBtn">確認</button>
                 </div>
                 <div class="col-12 col-md-6 p-3" id="a_border">
@@ -239,10 +238,22 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-12 col-md-6 p-3" id="a_border">
+                    <a href="#">
+                        <div class=" d-flex" id="card">
+                            <div class="w-50 card-pic">
+                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            </div>
+                            <div class="w-50 card-text m-auto" id="card_font">
+                                <p>操作日誌</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    
+
 
 
     <script>
