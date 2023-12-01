@@ -31,7 +31,7 @@
         }
 
         #main {
-            height: 500px;
+            height: 650px;
         }
 
         #bk {
@@ -172,6 +172,17 @@
             background: rgba(0, 0, 0, 0.3); /* 黑色背景，30%透明度 */
             z-index: 10; /* 确保覆盖层在其他内容之上 */
         }
+        #logout{
+            font-weight: 700;
+            display: flex;
+        }
+        .logout_img{
+            width: 40px;
+        }
+        .logout_img img{
+            width: 100%;
+            vertical-align: bottom;
+        }
         @media screen and (min-width:768px){
             #HowToUse{
                 width: 600px;
@@ -213,6 +224,9 @@
                     <p>個人設定</p>
                 </a>
                 <a href="">
+                    <p>預約資訊</p>
+                </a>
+                <a href="">
                     <p>付費設定</p>
                 </a>
                 <a href="">
@@ -223,6 +237,12 @@
                 </a>
                 <a href="" id="HowToUse_Button">
                     <p>使用說明</p>
+                </a>
+                <a href="" id="logout">
+                    <p>登出</p>
+                    <div class="logout_img">
+                        <img src="logout.png" alt="">
+                    </div>
                 </a>
             </div>
         </div>
