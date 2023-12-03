@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>"系統主頁（登入後）（介紹標語頁面）"</title>
+    <title>"系統主頁（登入前）（介紹標語頁面）"</title>
     <link rel="stylesheet" href="navigation_css.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -72,6 +72,7 @@
             font-size: 25px;
             display: none;
             border-radius: 20px;
+            z-index: 2;
         }
 
         #HowToUse a {
@@ -95,6 +96,7 @@
         img {
             width: 100%;
         }
+
         #HowToUseTitle {
             width: 100%;
             border-bottom: 3px solid black;
@@ -102,10 +104,12 @@
             text-align: center;
             margin-bottom: 30px;
         }
-        [id^="HowToUse_option"]{
+
+        [id^="HowToUse_option"] {
             font-size: 30px;
         }
-        [id^="option"]{
+
+        [id^="option"] {
             height: 500px;
             width: 250px;
             background-color: white;
@@ -118,21 +122,47 @@
             bottom: 0%;
             font-size: 25px;
             display: none;
+            z-index: 4;
+            padding: 0 5px;
         }
 
-        #bk4{
+        #bk4 {
             margin-right: 10px;
             width: 20px;
             height: 20px;
             margin-left: auto;
             padding-top: 5px;
         }
+
         [id^="HowToUse_option"] {
-        cursor: pointer;}
+            cursor: pointer;
+        }
+
         [id^="option"] {
             word-wrap: break-word;
             text-align: left;
-            }
+        }
+
+        #backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        #backdrop2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 3;
+        }
+
         @media screen and (min-width:768px) {
             #main-text {
                 margin-top: 100px;
@@ -160,9 +190,16 @@
                 margin-right: 20%;
                 padding-top: 10%;
             }
-            #use_teach{
+
+            #use_teach {
                 margin-bottom: 20px;
                 width: 30%;
+            }
+            #HowToUse{
+                width: 600px;
+            }
+            [id^="option"]{
+                width: 20%;
             }
         }
     </style>
@@ -185,6 +222,7 @@
             <div id="rwd-text">
                 <p id="introduce" class="ps-3">介紹標語</p>
                 <a href="" id="teaching" class="ps-3">使用教學</a>
+                <div id="backdrop" style="display:none;"></div>
                 <div class="flex-column p-3 align-items-center" id="HowToUse">
                     <div id="bk">
                         <a href="">
@@ -192,23 +230,26 @@
                         </a>
                     </div>
                     <p id="HowToUseTitle">使用說明</p>
-                    <p id="HowToUse_option1">如何尋找車位</p>
-                    <p id="HowToUse_option2">如何預約</p>
-                    <p id="HowToUse_option3">如何入場</p>
-                    <p id="HowToUse_option4">如何進行室內導航</p>
-                    <p id="HowToUse_option5">如何控制地鎖</p>
-                    <p id="HowToUse_option6">如何尋找愛車</p>
-                    <p id="HowToUse_option7">如何出場</p>
-                    <p id="HowToUse_option8">如何付款</p>
+            <p id="HowToUse_option1">帳戶管理</p>
+            <p id="HowToUse_option2">如何預約</p>
+            <p id="HowToUse_option3">如何控制地鎖</p>
+            <p id="HowToUse_option4">如何尋找愛車</p>
+            <p id="HowToUse_option5">如何付款</p>
                 </div>
+                <div id="backdrop2" style="display:none;"></div>
                 <div id="option1">
                     <div id="bk4">
                         <a href="#" id="question_bk_button">
                             <img src="back.png" alt="">
                         </a>
                     </div>
-                    <h3>如何尋找車位</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+                    <h3 style="font-weight: 700;">帳戶管理</h3>
+                    <p>
+                        登入和註冊：<br>
+        1.	 點選右上角圖示，可進行「登入」或「註冊會員」。<br>
+        2.	「註冊」時需輸入用戶名稱、電子信箱、手機號碼、設置密碼、確認密碼。<br>
+        3.	 提供「忘記密碼」服務，輸入電子信箱，系統發送驗證碼，通過後可重新設定密碼。
+        
         
                 </div>
                 <div id="option2">
@@ -217,8 +258,13 @@
                             <img src="back.png" alt="">
                         </a>
                     </div>
-                    <h3>如何預約</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+                    <h3 style="font-weight: 700;">如何預約</h3>
+                    <p>1.	點選「預約車位」。<br>
+                        2.	選擇車位類型。<br>
+                        3.	進行篩選，選擇空車位的車格代號。<br>
+                        4.	選擇預約的時間。<br>
+                        5.	點擊「預約」按鈕完成預約。
+                        </p>
         
                 </div>
                 <div id="option3">
@@ -227,8 +273,10 @@
                             <img src="back.png" alt="">
                         </a>
                     </div>
-                    <h3>如何入場</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+                    <h3 style="font-weight: 700;">如何控制地鎖</h3>
+                    <p>1.	當車輛接近預約車位時，系統自動彈出「下降地鎖」畫面。<br>
+                        2.	點選按鈕下降地鎖，確保預約車輛能順利停車。
+                        </p>
         
                 </div>
                 <div id="option4">
@@ -237,8 +285,10 @@
                             <img src="back.png" alt="">
                         </a>
                     </div>
-                    <h3>如何進行室內導航</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
+                    <h3 style="font-weight: 700;">如何尋找愛車</h3>
+                    <p>操作流程：<br>
+                        1.	點選「尋找愛車」。<br>
+                        2.	系統標示愛車的所在位置，協助使用者快速取車。</p>
         
                 </div>
                 <div id="option5">
@@ -247,46 +297,18 @@
                             <img src="back.png" alt="">
                         </a>
                     </div>
-                    <h3>如何控制地鎖</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
-        
-                </div>
-                <div id="option6">
-                    <div id="bk4">
-                        <a href="#" id="question_bk_button">
-                            <img src="back.png" alt="">
-                        </a>
-                    </div>
-                    <h3>如何尋找愛車</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
-        
-                </div>
-                <div id="option7">
-                    <div id="bk4">
-                        <a href="#" id="question_bk_button">
-                            <img src="back.png" alt="">
-                        </a>
-                    </div>
-                    <h3>如何出場</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
-        
-                </div>
-                <div id="option8">
-                    <div id="bk4">
-                        <a href="#" id="question_bk_button">
-                            <img src="back.png" alt="">
-                        </a>
-                    </div>
-                    <h3>如何付款</h3>
-                    <p>介紹使用車位導航系統或手機應用程序來查找空車位的方法。提供步驟指南或提示，例如觀察停車場的指示標誌和地面標線，以及利用現場停車信息板。</p>
-        
+                    <h3 style="font-weight: 700;">如何付款</h3>
+                    <p>1.	點選「費用查詢與繳費」。<br>
+                        2.	查詢停車場計費、目前停車時間、費用等資訊。<br>
+                        3.	提供線上繳費功能，選擇已儲存的信用卡資料或輸入信用卡資訊進行安全扣款。
+                        </p>
                 </div>
             </div>
         </div>
         <div id="bt">
             <p>下滑使用功能</p>
         </div>
-        
+
     </div>
 
 
@@ -300,34 +322,41 @@
             teach.addEventListener("click", (event) => {
                 event.preventDefault();
                 div.style.display = "flex";
+                document.getElementById("backdrop").style.display = 'block';
             })
 
             let bk = document.getElementById("bk");
             bk.addEventListener("click", (event) => {
                 event.preventDefault();
                 div.style.display = "none";
+                document.getElementById("backdrop").style.display = 'none';
+
             })
-            document.getElementById("HowToUse").addEventListener("click",function(event){
+            document.getElementById("HowToUse").addEventListener("click", function (event) {
                 const optionId = event.target.id;
                 console.log(optionId)
                 if (optionId.startsWith("HowToUse_option")) {
                     const optionNumber = optionId.replace("HowToUse_", "");
                     console.log(optionNumber)
                     const windowToShow = document.getElementById(optionNumber);
-                    
+
                     if (windowToShow) {
                         windowToShow.style.display = "block";
+                        document.getElementById("backdrop2").style.display = 'block';
+
+                    }
                 }
-    }
             })
-            document.querySelectorAll('[id^="bk4"]').forEach(function(bkButton) {
-            bkButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                var optionElement = bkButton.closest('[id^="option"]');
-                if (optionElement) {
-                optionElement.style.display = 'none';
-                }
-            });
+            document.querySelectorAll('[id^="bk4"]').forEach(function (bkButton) {
+                bkButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var optionElement = bkButton.closest('[id^="option"]');
+                    if (optionElement) {
+                        optionElement.style.display = 'none';
+                        document.getElementById("backdrop2").style.display = 'none';
+
+                    }
+                });
             });
         }
     </script>

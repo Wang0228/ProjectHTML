@@ -15,7 +15,14 @@
     <style>
         #card {
             background-color: #D8E5EE;
-            border-radius: 10px;
+            border-radius: 20px;
+            width: 334px;
+            height: 111px;
+            border: 1px solid black;
+        }
+        .card-pic img{
+            width: 117px; 
+            height: 111px;
         }
 
         #card_font {
@@ -70,7 +77,8 @@
             font-weight: 700;
             padding-left: 35%;
         }
-        #price_setting{
+
+        #price_setting {
             display: none;
             position: fixed;
             margin: auto;
@@ -81,12 +89,15 @@
             height: 80%;
             font-size: 20px;
             color: gray;
+            z-index: 2;
         }
-        #price_setting input{
+
+        #price_setting input {
             width: 80%;
             margin-left: 10%;
         }
-        #setting_title{
+
+        #setting_title {
             margin: auto;
             width: 80%;
             border-bottom: 3px solid black;
@@ -96,6 +107,7 @@
             margin-bottom: 30px;
             color: black;
         }
+
         .downBtn {
             display: block;
             width: 60%;
@@ -114,40 +126,62 @@
             left: 50%;
             transform: translate(-50%, 0);
         }
-        #price_setting textarea{
-                width: 100%;
-                max-width: 250px;
-                height: 30px;
-            }
+
+        #price_setting textarea {
+            width: 100%;
+            max-width: 250px;
+            height: 30px;
+        }
+
+        #backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+
         @media screen and (min-width:768px) {
-            #Booking{
+            #Booking {
                 width: 40%;
             }
-            #setting_title{
+
+            #setting_title {
                 margin-top: 55px;
                 font-size: 60px;
                 max-width: 800px;
                 margin-right: 20%;
             }
-            #price_text{
-                margin-left: 15%;
+
+            #price_text {
+                margin-left: 10%;
                 font-size: 40px;
             }
-            #price_setting{
-                width: 70%;
-                padding-left: 200px;
-                
+
+            #price_setting {
+                width: 50%;
+                padding-left: 8%;
+
             }
-            #price_setting input{
-            width: 40%;
-            margin-left: 20%;
-        }
-            .downBtn{
+
+            #price_setting input {
+                width: 40%;
+                margin-left: 20%;
+            }
+
+            .downBtn {
                 margin-left: -100px;
-                
             }
-
-
+            #card{
+            width: 616px;
+            height: 205px;
+            }
+            .card-pic img{
+            width: 308px; 
+            height: 205px;
+        }
         }
     </style>
 </head>
@@ -175,8 +209,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="#">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="label.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto price_st" id="card_font">
                                 <p>定價設定</p>
@@ -185,6 +221,7 @@
                     </a>
                 </div>
                 <!-- 定價設定 -->
+                <div id="backdrop" style="display:none;"></div>
                 <div id="price_setting">
                     <p id="setting_title">定價設定</p>
                     <p class="ps-4" id="price_text">每小時價錢</p>
@@ -194,8 +231,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="" id="Booking_bt">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="financial-report.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>財務統計</p>
@@ -206,8 +245,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="group-chat.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>會員資料<br>管理</p>
@@ -218,8 +259,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="#">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="parking-area.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>車位資料<br>管理</p>
@@ -230,8 +273,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="#">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="question.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>問題回報<br>管理</p>
@@ -242,8 +287,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="#">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="https://fakeimg.pl/300x200/200" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="operation.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>操作日誌</p>
@@ -258,13 +305,15 @@
 
 
     <script>
-        window.onload=()=>{
-            document.querySelector(".price_st").addEventListener("click",()=>{
-                document.getElementById("price_setting").style.display='block'
+        window.onload = () => {
+            document.querySelector(".price_st").addEventListener("click", () => {
+                document.getElementById("backdrop").style.display = 'block';
+                document.getElementById("price_setting").style.display = 'block'
             })
-            document.querySelector(".downBtn").addEventListener("click",()=>{
+            document.querySelector(".downBtn").addEventListener("click", () => {
                 alert("成功")
-                document.getElementById("price_setting").style.display='none'
+                document.getElementById("backdrop").style.display = 'none';
+                document.getElementById("price_setting").style.display = 'none'
             })
         }
     </script>

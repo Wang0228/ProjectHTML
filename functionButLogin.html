@@ -1,11 +1,11 @@
-<!-- 系統主頁(登入後) -->
+<!-- 系統主頁(登入前) -->
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>"系統主頁（登入後）（四功能按鈕）"</title>
+    <title>"系統主頁（登入前）（四功能按鈕）"</title>
     <link rel="stylesheet" href="all.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -16,7 +16,8 @@
     <style>
         #card {
             background-color: #D8E5EE;
-            border-radius: 10px;
+            border-radius: 20px;
+            border: 1px solid black;
         }
 
         #card_font {
@@ -113,8 +114,7 @@
             .card-pic img{
             width: 308px; 
             height: 205px;
-        }
-        }
+        }}
     </style>
 </head>
 
@@ -136,13 +136,15 @@
         </nav>
 
 
-        <div class="container d-flex" style="margin-top: 100px;">
+        <div class="container  d-flex" style="margin-top: 100px;">
             <div class="row m-auto align-content-around">
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="預約車位.png" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="calendar.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>預約車位</p>
@@ -153,8 +155,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="" id="Booking_bt">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="預約資訊.png" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="info.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>預約資訊</p>
@@ -165,8 +169,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="尋找愛車.png" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="search.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>尋找愛車</p>
@@ -177,8 +183,10 @@
                 <div class="col-12 col-md-6 p-3" id="a_border">
                     <a href="Inquire.html">
                         <div class=" d-flex" id="card">
-                            <div class="w-50 card-pic">
-                                <img src="費用查詢及繳費.png" class="w-100">
+                            <div class="w-50 card-pic d-flex justify-content-center align-content-center">
+                                <div class="pic-center" style="height: 100%; padding-top: 20px;">
+                                    <img src="pay-per-click.png" class="w-100" style="height: 90%;">
+                                </div>
                             </div>
                             <div class="w-50 card-text m-auto" id="card_font">
                                 <p>費用查詢<br>及繳費</p>
@@ -190,41 +198,10 @@
         </div>
     </div>
 
-    <div id="Booking">
-        <p class="" id="BookingTitle">預約資訊</p>
-        <div class="" id="imformation">
-            <div id="time">
-                <p class="m-0">預約時間</p>
-                <p>2022/01/01 16:32</p>
-            </div>
-            <div id="num">
-                <p>預約代號</p>
-                <p>123</p>
-            </div>
-            <div id="num">
-                <p>預約車格</p>
-                <p>B23</p>
-            </div>
-        </div>
-        <div id="bt">
-            <button type="button" id="back">返回</button>
-            <button type="button" id="cancel">取消預約</button>
-        </div>
-    </div>
 
 
-    <script>
-        window.onload=()=>{
-            document.getElementById("Booking_bt").addEventListener("click",()=>{
-                document.getElementById("Booking").style.display="block";
-                event.preventDefault();
-            })
-            document.getElementById("back").addEventListener("click",()=>{
-                document.getElementById("Booking").style.display="none";
-                event.preventDefault();
-            })
-        }
-    </script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
