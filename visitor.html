@@ -20,7 +20,7 @@
         }
 
         #bg {
-            height: 100vh;
+            height: 200vh;
             background: linear-gradient(to bottom right, #4a9bf1, white, #4a9bf1);
         }
 
@@ -306,7 +306,7 @@
             </div>
         </div>
         <div id="bt">
-            <p>下滑使用功能</p>
+            <p>上滑使用功能</p>
         </div>
 
     </div>
@@ -358,6 +358,13 @@
                     }
                 });
             });
+
+            window.addEventListener('scroll', function() {
+    var scrollThreshold = 100; 
+    if (window.scrollY > scrollThreshold) {
+        window.location.href = 'function.html'; 
+    }
+});
         }
     </script>
 
