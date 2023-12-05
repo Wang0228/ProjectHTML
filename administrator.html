@@ -20,8 +20,9 @@
             height: 111px;
             border: 1px solid black;
         }
-        .card-pic img{
-            width: 117px; 
+
+        .card-pic img {
+            width: 117px;
             height: 111px;
         }
 
@@ -139,10 +140,27 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.6);
+            background-color: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
 
+        #logout {
+            font-weight: 700;
+            display: flex;
+        }
+
+        .logout_img {
+            width: 28px;
+        }
+
+        .logout_img img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+        
+        #bg{
+            height: 120vh;
+        }
         @media screen and (min-width:768px) {
             #Booking {
                 width: 40%;
@@ -174,14 +192,16 @@
             .downBtn {
                 margin-left: -100px;
             }
-            #card{
-            width: 616px;
-            height: 205px;
+
+            #card {
+                width: 616px;
+                height: 205px;
             }
-            .card-pic img{
-            width: 308px; 
-            height: 205px;
-        }
+
+            .card-pic img {
+                width: 308px;
+                height: 205px;
+            }
         }
     </style>
 </head>
@@ -195,9 +215,19 @@
                     <div class="" id="top-left">
                         系統名稱
                     </div>
-                    <div class="" id="top-right">
-                        <a href="" class="m-2" id="loginBT">XXX您好</a>
-                        <i class="fa-solid fa-user"></i>
+                    <div class="d-flex" id="top-right">
+                        <div >
+                            <a href="" class="m-2" id="loginBT">XXX您好</a>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="ms-3">
+                            <a href="" id="logout">
+                                <p>登出</p>
+                                <div class="logout_img">
+                                    <img src="logout.png" alt="">
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </span>
             </div>
