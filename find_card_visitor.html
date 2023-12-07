@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>車牌號碼繳費查詢</title>
+    <link rel="stylesheet" href="all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b608df6edd.js" crossorigin="anonymous"></script>
+
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #title {
+            font-weight: 700;
+            font-size: 40px;
+            padding-top: 15%;
+            margin: 0;
+        }
+
+
+        #bt {
+            display: flex;
+            flex-direction: column;
+            font-size: 22px;
+        }
+
+        #leave {
+            background-color: #518ab7;
+            width: 80%;
+            height: 40px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin: 20% 20px 20px;
+            color: white;
+        }
+
+        .input_carnumber {
+            margin-top: 20%;
+        }
+
+        .input_carnumber p {
+            font-size: 20px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .input_carnumber input {
+            height: 30px;
+        }
+
+        @media screen and (min-width:768px) {
+            #title {
+                font-size: 50px;
+                padding-top: 10%;
+            }
+
+            #bt {
+                margin: 0;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            #leave {
+                width: 20%;
+                margin-top: 10%;
+            }
+
+            .input_carnumber {
+                margin-top: 10%;
+            }
+
+            .input_carnumber p {
+                font-size: 40px;
+                font-weight: 500;
+                margin-right: 10px;
+            }
+            .input_carnumber input {
+            margin-top: 10px;
+            height: 40px;
+            width: 350px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fuild" id="bg">
+        <nav class="navbar navbar-light bg-light p-0">
+            <div class="container-fluid">
+                <span class="navbar-text d-flex w-100 justify-content-between align-content-center pt-3 pb-3">
+                    <div class="" id="top-left">
+                        系統名稱
+                    </div>
+                </span>
+            </div>
+        </nav>
+
+        <div class="container h-80">
+            <div class="row m-auto h-75 align-content-around d-flex flex-column align-items-center">
+                <h1 id="title">車牌號碼繳費查詢</h1>
+                <div class="input_carnumber d-flex justify-content-center align-content-center">
+                    <p>車牌號碼</p>
+                    <input type="text">
+                </div>
+                <div id="bt">
+                    <button type="button" id="leave"><a href="#">查詢</a></button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
