@@ -43,7 +43,7 @@
         }
 
         .input_carnumber {
-            margin-top: 20%;
+            margin-top: 10%;
         }
 
         .input_carnumber p {
@@ -56,13 +56,37 @@
             height: 30px;
         }
 
+        .member_car {
+            background-color: rgb(237, 223, 223);
+            width: 45%;
+            font-size: 15px;
+            display: flex;
+            text-align: left;
+            margin-top: 5px;
+            margin-right: 10px;
+            padding: 4px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        /* input輸入樣式 */
+        .member_car input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .car_number_card{
+            margin-top: 10%;
+        }
+
         @media screen and (min-width:768px) {
             #title {
                 font-size: 50px;
                 padding-top: 10%;
             }
 
-            #bt {
+            #bt {   
                 margin: 0;
                 align-items: center;
                 display: flex;
@@ -75,7 +99,7 @@
             }
 
             .input_carnumber {
-                margin-top: 10%;
+                margin-top: 5%;
             }
 
             .input_carnumber p {
@@ -83,10 +107,14 @@
                 font-weight: 500;
                 margin-right: 10px;
             }
+
             .input_carnumber input {
-            margin-top: 10px;
-            height: 40px;
-            width: 350px;
+                margin-top: 10px;
+                height: 40px;
+                width: 350px;
+            }
+            .member_car {
+                width: 200px;
         }
         }
     </style>
@@ -108,6 +136,14 @@
         <div class="container h-80">
             <div class="row m-auto h-75 align-content-around d-flex flex-column align-items-center">
                 <h1 id="title">尋找愛車車牌查詢</h1>
+                <div class="d-flex car_number_card row w-100 justify-content-center" >
+                    <button id="inputContainer" class="member_car col-6">
+                        Mercedes-Benz-123
+                    </button>
+                    <button id="inputContainer" class="member_car col-6">
+                        Mercedes-Benz-123
+                    </button>
+                </div>
                 <div class="input_carnumber d-flex justify-content-center align-content-center">
                     <p>車牌號碼</p>
                     <input type="text">
