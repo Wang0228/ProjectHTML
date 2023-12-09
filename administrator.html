@@ -83,20 +83,18 @@
             display: none;
             position: fixed;
             margin: auto;
-            margin-bottom: 0;
             left: 0;
             right: 0;
             background-color: white;
             width: 80%;
-            height: 80%;
+            height: 70%;
             font-size: 20px;
             color: gray;
             z-index: 2;
         }
-
+        
         #price_setting input {
             width: 80%;
-            margin-left: 10%;
         }
 
         #setting_title {
@@ -123,16 +121,12 @@
             display: inline-block;
             font-size: 20px;
             position: relative;
-            top: 30%;
+            top: 20%;
             left: 50%;
             transform: translate(-50%, 0);
         }
 
-        #price_setting textarea {
-            width: 100%;
-            max-width: 250px;
-            height: 30px;
-        }
+        
 
         #backdrop {
             position: fixed;
@@ -252,10 +246,10 @@
                 </div>
                 <!-- 定價設定 -->
                 <div id="backdrop" style="display:none;"></div>
-                <div id="price_setting" class="">
+                <div id="price_setting" class="d-flex flex-column align-content-center">
                     <p id="setting_title">定價設定</p>
-                    <p class="ps-4" id="price_text">每小時價錢</p>
-                    <input type="text" id="" placeholder="">
+                    <p class="" id="price_text">每小時價錢</p>
+                    <input type="text" id="input_price_setting" placeholder="">
                     <button class="downBtn">確認</button>
                 </div>
                 <div class="col-12 col-md-6 p-3" id="a_border">
